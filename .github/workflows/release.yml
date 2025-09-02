@@ -30,9 +30,5 @@ jobs:
 
       - name: Run semantic-release
         env:
-<<<<<<< HEAD
-          GH_TOKEN: ${{ secrets.TOKEN_RELEASE }}  # <- preferencial para semantic-release
-=======
           GITHUB_TOKEN: ${{ secrets.TOKEN_RELEASE }}
->>>>>>> 2f99af40e24f03de23401f3d7d25a40377b6b550
         run: npx semantic-release
