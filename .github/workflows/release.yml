@@ -32,3 +32,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.RELEASE_GENERATE }}  # <- preferencial para semantic-release
         run: npx semantic-release
+
