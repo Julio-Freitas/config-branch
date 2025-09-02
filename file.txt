@@ -4,4 +4,4 @@ Major, Minor, Patch
 2.1.4
 2 -> Major - API Pública
 1 -> Minor - Add funcionalidades compativeis
-4 -> Patch - Bugs, Ajustes
+4 -> Patch - Bugs, Ajustes...
