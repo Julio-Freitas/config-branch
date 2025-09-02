@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn exec pretty-quick --staged && NODE_ENV=ci yarn exec concurrently yarn:test yarn:lint yarn:build
