@@ -21,7 +21,7 @@ jobs:
           cache: 'npm'  # Cachea node_modules para melhorar performance
 
       - name: Install dependencies
-        run: npm ci  # mais rápido e seguro que npm install para CI
+        run: npm install  # mais rápido e seguro que npm install para CI
 
       - name: Set Git user for semantic-release
         run: |
@@ -30,5 +30,9 @@ jobs:
 
       - name: Run semantic-release
         env:
+<<<<<<< HEAD
           GH_TOKEN: ${{ secrets.TOKEN_RELEASE }}  # <- preferencial para semantic-release
+=======
+          GITHUB_TOKEN: ${{ secrets.TOKEN_RELEASE }}
+>>>>>>> 2f99af40e24f03de23401f3d7d25a40377b6b550
         run: npx semantic-release

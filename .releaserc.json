@@ -60,5 +60,16 @@
       }
     ],
     "@semantic-release/github"
-  ]
+  ],
+  "release": {
+    "extends": "@semantic-release/gitlab-config",
+    "prepare": [
+      "@semantic-release/changelog",
+      {
+        "path": "@semantic-release/git",
+        "assets": ["package.json", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} \n\n${nextRelease.notes}"
+      }
+    ]
+  }
 }
