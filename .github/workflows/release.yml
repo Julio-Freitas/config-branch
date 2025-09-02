@@ -11,17 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20.19.0
+          node-version: 20
+          cache: 'npm'  # Cachea node_modules para melhorar performance
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # mais rápido e seguro que npm install para CI
 
-      - name: Run release
+      - name: Set Git user for semantic-release
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_RELEASE }}
+          GH_TOKEN: ${{ secrets.TOKEN_RELEASE }}  # <- preferencial para semantic-release
         run: npx semantic-release
