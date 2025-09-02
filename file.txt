@@ -5,3 +5,4 @@ Major, Minor, Patch
 2 -> Major - API Pública
 1 -> Minor - Add funcionalidades compativeis
 4 -> Patch - Bugs, Ajustes...
+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
