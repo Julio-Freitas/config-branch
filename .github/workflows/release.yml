@@ -28,9 +28,9 @@ jobs:
           cache: "yarn"
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_GENERATE }} # Use o token padrão do GitHub Actions
-        run: npx semantic-release
+        run: yarn release
