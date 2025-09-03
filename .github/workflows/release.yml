@@ -1,26 +1,36 @@
-name: Release CI
+name: Release
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 👈 Adicione esta linha
+      contents: write # Permite que o GitHub Actions faça push e crie tags
       issues: write
       pull-requests: write
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
-          persist-credentials: false
-      - uses: actions/setup-node@v3
+          fetch-depth: 0 # Necessário para o semantic-release analisar o histórico de commits
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: "20"
-      - run: npm install
-      - run: yarn release
+          node-version: 20
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_GENERATE }}
+        run: npx semantic-release
