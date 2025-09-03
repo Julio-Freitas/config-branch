@@ -23,4 +23,5 @@ jobs:
       - run: npm install
       - run: yarn release
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_GENERATE }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_GENERATE }}  # <- preferencial para semantic-release
+        run:  yarn release
