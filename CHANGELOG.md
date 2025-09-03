@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Julio-Freitas/config-branch/compare/v1.1.0...v1.2.0) (2025-09-03)
+
+
+### Features
+
+* change files ([#20](https://github.com/Julio-Freitas/config-branch/issues/20)) ([978d363](https://github.com/Julio-Freitas/config-branch/commit/978d363e49177e8ddf5029f8b01d596740603375)), closes [#17](https://github.com/Julio-Freitas/config-branch/issues/17) [#16](https://github.com/Julio-Freitas/config-branch/issues/16)
+
 # [1.1.0](https://github.com/Julio-Freitas/config-branch/compare/v1.0.0...v1.1.0) (2025-09-03)
 
 
