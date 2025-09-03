@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Julio-Freitas/config-branch/compare/v1.0.0...v1.1.0) (2025-09-03)
+
+
+### Features
+
+* insert html ([#18](https://github.com/Julio-Freitas/config-branch/issues/18)) ([68c5d86](https://github.com/Julio-Freitas/config-branch/commit/68c5d865aa9ea3ae305b1cefeb199ba07d65cd13)), closes [#17](https://github.com/Julio-Freitas/config-branch/issues/17) [#16](https://github.com/Julio-Freitas/config-branch/issues/16)
+
 # 1.0.0 (2025-09-03)
 
 
