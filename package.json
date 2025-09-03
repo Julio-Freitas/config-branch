@@ -9,7 +9,8 @@
     "build": "echo \"build: Command build...\" && exit 0",
     "prepare": "husky install",
     "cm": "cz",
-    "commit": "git add . && npm run cm && git push"
+    "commit": "git add . && npm run cm && git push",
+    "release": "semantic-release"
   },
   "author": "",
   "license": "ISC",
